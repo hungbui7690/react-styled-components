@@ -1,24 +1,19 @@
 /*
-  Utils Approach Use Case
-  - with Utils way, the only reason we want to use is when we want to setup function
+  Nesting
+  - pic: card-exercise
 
-  (1) utils.js
-
+  (1) create components/Card.jsx
 */
 
-// (2)
 import styled from 'styled-components'
-import ComplexTitle from './components/ComplexTitle'
 
-import { colors, setupBorder } from './utils'
+// (***)
+import Card from './components/Card'
 
 function App() {
   return (
     <Wrapper>
-      <ComplexTitle title='Hello World' />
-
-      {/* (3) */}
-      <div className='box'></div>
+      <Card />
     </Wrapper>
   )
 }
@@ -31,14 +26,8 @@ const Wrapper = styled.section`
   align-items: center;
   padding: 3rem;
   gap: 1rem;
-
-  .box {
-    width: 300px;
-    height: 300px;
-
-    /* (4) */
-    border: ${setupBorder({ width: '1px', type: 'solid', color: 'green' })};
-  }
+  background-color: #eff1f5;
+  min-height: 100vh;
 `
 
 export default App
