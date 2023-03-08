@@ -1,19 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ComplexTitle = ({ title }) => {
+const ComplexTitle = (props) => {
+  console.log(props) // {title: 'Hello World', className: 'sc-beySbM gZrJao'} > className is passed to props
+
   return (
-    // (***) use Wrapper instead of div
-    <Wrapper>
-      <h1>{title}</h1>
+    // (***) Change back to div + pass className from props
+    <div className={props.className}>
+      <h1>{props.title}</h1>
       <div className='underline'></div>
-    </Wrapper>
+    </div>
   )
 }
 
-// (***) with this setup, we can use very simple class name, and don't worry about class name collision > for example: create Random.jsx and setup same as this one
-const Wrapper = styled.div`
-  /* target to h1 inside Wrapper */
+// (***) extends ComplexTitle
+const Wrapper = styled(ComplexTitle)`
   h1 {
     text-transform: uppercase;
   }
@@ -25,4 +26,5 @@ const Wrapper = styled.div`
   }
 `
 
-export default ComplexTitle
+// (***) with this setup, we need to export Wrapper
+export default Wrapper

@@ -1,10 +1,9 @@
 /*
-  More Complex Component P2
+  Alternative Syntax
 
-  (1) components/ComplexTitle.js
+  (1) ComplexTitle
 
-  (***) same class name, but no collision
-
+  (***) don't recommended
 */
 
 import styled from 'styled-components'
@@ -15,7 +14,6 @@ function App() {
   return (
     <Wrapper>
       <ComplexTitle title='Hello World' />
-      <Random title='Bye' />
     </Wrapper>
   )
 }
