@@ -1,18 +1,23 @@
 /*
-  Other Props Options
+  Extended Styled Component
 
+  (1) Buttons.js
  */
 
 import BasicTitle from './components/BasicTitle'
-import { DefaultButton } from './components/Buttons'
+
+// (2)
+import { DefaultButton, HipsterButton } from './components/Buttons'
 
 function App() {
   return (
-    <div style={{ padding: '2rem', backgroundColor: 'grey' }}>
-      {/* (1) pass props */}
+    <div>
       <BasicTitle special>Styled Components</BasicTitle>
 
       <DefaultButton>Click Me</DefaultButton>
+
+      {/* (3) */}
+      <HipsterButton>Click Me</HipsterButton>
     </div>
   )
 }
