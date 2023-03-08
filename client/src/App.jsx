@@ -1,13 +1,10 @@
 /*
-  Nesting
-  - pic: card-exercise
+  Media Queries - Hover & Pseudo Element
 
-  (1) create components/Card.jsx
+  (1) components/Card.jsx
 */
 
 import styled from 'styled-components'
-
-// (***)
 import Card from './components/Card'
 
 function App() {
