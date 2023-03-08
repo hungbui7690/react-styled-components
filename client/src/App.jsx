@@ -1,6 +1,12 @@
 /*
-  Global Classes
+  CSS Variables
+  - 2 ways: 
+    + CSS
+    + Utils Approach
+  - this lesson, we work with CSS way.
 
+
+  
   (1) index.css
 
 */
@@ -11,8 +17,7 @@ import Random from './components/Random'
 
 function App() {
   return (
-    // (2) this one is easy to overwrite > see below
-    <Wrapper className='bg-grey'>
+    <Wrapper>
       <ComplexTitle title='Hello World' />
     </Wrapper>
   )
@@ -27,8 +32,8 @@ const Wrapper = styled.section`
   padding: 3rem;
   gap: 1rem;
 
-  /* (3) */
-  background-color: lightblue;
+  /* (2) */
+  background-color: var(--primaryColor);
 `
 
 export default App
