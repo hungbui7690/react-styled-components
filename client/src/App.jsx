@@ -1,9 +1,8 @@
 /*
-  Alternative Syntax
+  Global Classes
 
-  (1) ComplexTitle
+  (1) index.css
 
-  (***) don't recommended
 */
 
 import styled from 'styled-components'
@@ -12,7 +11,8 @@ import Random from './components/Random'
 
 function App() {
   return (
-    <Wrapper>
+    // (2) this one is easy to overwrite > see below
+    <Wrapper className='bg-grey'>
       <ComplexTitle title='Hello World' />
     </Wrapper>
   )
@@ -26,6 +26,9 @@ const Wrapper = styled.section`
   align-items: center;
   padding: 3rem;
   gap: 1rem;
+
+  /* (3) */
+  background-color: lightblue;
 `
 
 export default App

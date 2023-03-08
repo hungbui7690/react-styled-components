@@ -2,10 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ComplexTitle = (props) => {
-  console.log(props) // {title: 'Hello World', className: 'sc-beySbM gZrJao'} > className is passed to props
-
   return (
-    // (***) Change back to div + pass className from props
     <div className={props.className}>
       <h1>{props.title}</h1>
       <div className='underline'></div>
@@ -13,7 +10,6 @@ const ComplexTitle = (props) => {
   )
 }
 
-// (***) extends ComplexTitle
 const Wrapper = styled(ComplexTitle)`
   h1 {
     text-transform: uppercase;
@@ -26,5 +22,4 @@ const Wrapper = styled(ComplexTitle)`
   }
 `
 
-// (***) with this setup, we need to export Wrapper
 export default Wrapper
