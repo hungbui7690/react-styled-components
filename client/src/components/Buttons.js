@@ -10,7 +10,6 @@ export const DefaultButton = styled.button`
   margin: 0 auto;
 `
 
-// (1) this button extends DefaultButton > go to App.js and use
 export const HipsterButton = styled(DefaultButton)`
   width: 10rem;
   background: transparent;
