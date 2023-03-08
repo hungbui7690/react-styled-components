@@ -1,19 +1,20 @@
 /*
-  CSS Variables
-  - 2 ways: 
-    + CSS
-    + Utils Approach
-  - this lesson, we work with CSS way.
+  Utils Approach
+  - create object contains multiple variables
+
+  (1) create utils.js
+  (2) App.js
 
 
-  
-  (1) index.css
+  (***) with this, we need to import every time we need to use > use Global CSS Variables
 
 */
 
 import styled from 'styled-components'
 import ComplexTitle from './components/ComplexTitle'
-import Random from './components/Random'
+
+// (2)
+import { colors } from './utils'
 
 function App() {
   return (
@@ -32,8 +33,8 @@ const Wrapper = styled.section`
   padding: 3rem;
   gap: 1rem;
 
-  /* (2) */
-  background-color: var(--primaryColor);
+  /* (3) */
+  background-color: ${colors.primary};
 `
 
 export default App
