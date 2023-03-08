@@ -1,15 +1,24 @@
 /*
-  Media Queries - Hover & Pseudo Element
+  Global Styles (Alternative)
+  - b4, we use index.css to setup global styles (recommended)
+  - this lesson, we learn how to setup global styles with JS
 
-  (1) components/Card.jsx
+
+  (1) main.jsx > comment import index.css
+  (2) create global-styles.[js]
 */
 
 import styled from 'styled-components'
 import Card from './components/Card'
 
+// (4)
+import GlobalStyles from './global-styles'
+
 function App() {
   return (
     <Wrapper>
+      {/* (5) */}
+      <GlobalStyles />
       <Card />
     </Wrapper>
   )
