@@ -1,33 +1,33 @@
 /*
-  Setup in Details
-
-  (***) check in Elements tab > className is decoded > no name collision
-    > hard to debug 
-      > solution: https://styled-components.com/docs/tooling#babel-plugin
-
-
-  Extension: vscode-styled-components
+  Button Component
 
  */
 
-// (1) styled === naming convention
 import styled from 'styled-components'
 
-// (2) create react component > Pascal Case
-// template string === tagged template literal === es6 !== react
 const BasicTitle = styled.h1`
   text-align: center;
   margin-bottom: 1rem;
 `
 
+// (1) name === Default > later use
+const DefaultButton = styled.button`
+  background-color: crimson;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+`
+
 function App() {
   return (
     <div style={{ padding: '2rem', backgroundColor: 'grey' }}>
-      {/* (3) reuse easily */}
-      <BasicTitle>Styled Components</BasicTitle>
       <BasicTitle>Styled Components</BasicTitle>
 
-      <button className='btn'>Click Me</button>
+      {/* (2) at the end, it is still a button */}
+      <DefaultButton>Click Me</DefaultButton>
     </div>
   )
 }
