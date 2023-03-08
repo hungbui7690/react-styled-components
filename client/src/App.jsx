@@ -1,26 +1,40 @@
 /*
-  Global Styles (Alternative)
-  - b4, we use index.css to setup global styles (recommended)
-  - this lesson, we learn how to setup global styles with JS
-
-
-  (1) main.jsx > comment import index.css
-  (2) create global-styles.[js]
+  Theming P1
 */
 
-import styled from 'styled-components'
-import Card from './components/Card'
-
-// (4)
+import styled, { ThemeProvider } from 'styled-components'
 import GlobalStyles from './global-styles'
+import { useState } from 'react'
+
+// (1)
+const BaseTheme = {
+  color: '#222',
+  background: '#fff',
+}
+const DarkTheme = {
+  color: '#fff',
+  background: '#222',
+}
+
+// (3)
+const Container = styled.div`
+  padding: 2rem;
+  color: ${(props) => props.theme.color};
+  background-color: ${(props) => props.theme.background};
+`
 
 function App() {
+  // (2) wrap
   return (
-    <Wrapper>
-      {/* (5) */}
+    <ThemeProvider theme={DarkTheme}>
       <GlobalStyles />
-      <Card />
-    </Wrapper>
+
+      {/* (4) */}
+      <Container>
+        <h1>Hello World</h1>
+        <button className='btn'>Toggle Me</button>
+      </Container>
+    </ThemeProvider>
   )
 }
 
