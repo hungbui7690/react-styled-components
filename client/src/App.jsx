@@ -1,32 +1,20 @@
 /*
-  Button Component
+  Separate Files 
+  - since these are react components > we can divide in multiple files easily
+
+  (1) create folder components/BasicTitle.js
+    > Buttons.js > later, we want to have many Buttons in this file
 
  */
 
-import styled from 'styled-components'
-
-const BasicTitle = styled.h1`
-  text-align: center;
-  margin-bottom: 1rem;
-`
-
-// (1) name === Default > later use
-const DefaultButton = styled.button`
-  background-color: crimson;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto;
-`
+// (***)
+import BasicTitle from './components/BasicTitle'
+import { DefaultButton } from './components/Buttons'
 
 function App() {
   return (
     <div style={{ padding: '2rem', backgroundColor: 'grey' }}>
       <BasicTitle>Styled Components</BasicTitle>
-
-      {/* (2) at the end, it is still a button */}
       <DefaultButton>Click Me</DefaultButton>
     </div>
   )
