@@ -9,11 +9,6 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* (***) */
-.title {
-  text-align: center;
-  margin-bottom: 1rem;
-}
 .btn {
   background-color: crimson;
   color: white;

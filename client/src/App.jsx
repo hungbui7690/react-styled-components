@@ -1,12 +1,20 @@
 /*
-  First Styled Component
+  Setup in Details
+
+  (***) check in Elements tab > className is decoded > no name collision
+    > hard to debug 
+      > solution: https://styled-components.com/docs/tooling#babel-plugin
+
+
+  Extension: vscode-styled-components
 
  */
 
-// (1)
+// (1) styled === naming convention
 import styled from 'styled-components'
 
-// (2) cut from the index.css
+// (2) create react component > Pascal Case
+// template string === tagged template literal === es6 !== react
 const BasicTitle = styled.h1`
   text-align: center;
   margin-bottom: 1rem;
