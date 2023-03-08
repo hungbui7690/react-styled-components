@@ -1,20 +1,21 @@
 /*
-  More Complex Component P1
+  More Complex Component P2
 
-  (1) create components/ComplexTitle.js
+  (1) components/ComplexTitle.js
+
+  (***) same class name, but no collision
 
 */
 
 import styled from 'styled-components'
-
-// (2a)
 import ComplexTitle from './components/ComplexTitle'
+import Random from './components/Random'
 
 function App() {
   return (
     <Wrapper>
-      {/* (2b) */}
       <ComplexTitle title='Hello World' />
+      <Random title='Bye' />
     </Wrapper>
   )
 }

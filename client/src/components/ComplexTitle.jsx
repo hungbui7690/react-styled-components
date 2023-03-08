@@ -1,17 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// (1)
 const ComplexTitle = ({ title }) => {
   return (
-    <div>
+    // (***) use Wrapper instead of div
+    <Wrapper>
       <h1>{title}</h1>
       <div className='underline'></div>
-    </div>
+    </Wrapper>
   )
 }
 
-// (***) since the wrap around h1 is a div > here we use a div
-const Wrapper = styled.div``
+// (***) with this setup, we can use very simple class name, and don't worry about class name collision > for example: create Random.jsx and setup same as this one
+const Wrapper = styled.div`
+  /* target to h1 inside Wrapper */
+  h1 {
+    text-transform: uppercase;
+  }
+  .underline {
+    width: 5rem;
+    height: 0.25rem;
+    background-color: crimson;
+    margin: 0 auto;
+  }
+`
 
 export default ComplexTitle
