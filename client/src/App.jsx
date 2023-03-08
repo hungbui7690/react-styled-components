@@ -1,6 +1,5 @@
 /*
-  Simple Props
-  - since they are react components > we can pass props 
+  Other Props Options
 
  */
 

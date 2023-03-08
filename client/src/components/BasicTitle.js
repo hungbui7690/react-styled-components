@@ -4,8 +4,11 @@ const BasicTitle = styled.h1`
   text-align: center;
   margin-bottom: 1rem;
 
-  /* (2) in styled component > it's a little bit different > since this is css, first we need to have the property */
-  color: ${(props) => props.special && 'darkorange'};
+  /* (***) props > we can destructure  */
+  color: ${({ special }) => special && 'darkorange'};
+
+  /* (***) ternary operator */
+  text-decoration: ${(props) => (props.special ? 'underline' : 'none')};
 `
 
 export default BasicTitle
